@@ -12,8 +12,7 @@ namespace CSBasic
         static void Main(string[] args)
         {
             var name = "김" + "수" + "현";
-            Console.Write("개행 안 됨");
-            Console.WriteLine("개행 됨");
+           
 
             var alpha = "알파";
             //var 0319 = "숫자 변수 안돼요";
@@ -24,8 +23,10 @@ namespace CSBasic
             /*
              * 여러 줄 주석
              */
+            Console.Write("개행 안 됨");
+            Console.WriteLine("개행 됨");
 
-         
+
         }
     }
 }
