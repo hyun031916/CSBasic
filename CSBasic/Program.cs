@@ -9,6 +9,7 @@ namespace CSBasic
     class Program
     {
         string Var = "테스트";
+        //var testing = "전역변수에 var 시용 불가";
         static void Main(string[] args)
         {
             var name = "김" + "수" + "현";
@@ -128,6 +129,44 @@ namespace CSBasic
             Console.WriteLine(number--);
             Console.WriteLine(--number);
             Console.WriteLine(number);
+
+            int _int = 273;
+            long _long = 624235252342;
+            float _float = 52.273F;
+            double _double = 52.273;
+            char _char = '나';
+            string _string = "수현";
+
+            Console.WriteLine((1000000000).GetType());
+            Console.WriteLine(_int.GetType());
+            Console.WriteLine(_long.GetType());
+            Console.WriteLine(_float.GetType());
+            Console.WriteLine(_double.GetType());
+            Console.WriteLine(_char.GetType());
+            Console.WriteLine(_string.GetType());
+            Console.WriteLine((2211111111).GetType());
+            Console.WriteLine((2211111111L).GetType());
+
+
+            var number3 = 100;
+            //var number4; error - 선언과 동시에 초기화 해야함
+            var number4 = "앙";
+            var number5 = 100.0;
+            var number6 = 100.0F;
+
+            string input = Console.ReadLine();
+            Console.WriteLine("input: " + input);
+            while (true)
+            {
+                input = Console.ReadLine();
+                if (input != "q")
+                {
+                    Console.WriteLine(input);
+                }
+                else
+                {
+                    break; 
+                }
         }
     }
 }
