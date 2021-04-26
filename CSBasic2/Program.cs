@@ -41,7 +41,7 @@ namespace CSBasic2
                 Console.WriteLine("오후 입니다.");
             }*/
 
-
+/*
             //if elseif else
             if(DateTime.Now.Hour < 11)
             {
@@ -95,6 +95,48 @@ namespace CSBasic2
             Console.Write("숫자 입력: ");
             int number7 = int.Parse(Console.ReadLine());
             Console.WriteLine(number7 > 0 ? "자연수" : "자연수 아님");
+*/
+
+            Console.WriteLine("인사 판별기");
+            Console.Write("입력>");
+            String line = Console.ReadLine();
+            if (line.Contains("안녕"))
+            {
+                Console.WriteLine("안녕");
+            }
+            else
+            {
+                Console.WriteLine("무엇이 필요하신가요?");
+            }
+
+            // 키입력 구분
+            ConsoleKeyInfo info;
+            bool isInput = true;
+            while (isInput)
+            {
+                info = Console.ReadKey();
+                switch (info.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        Console.Write("↑");
+                        break;
+                    case ConsoleKey.DownArrow:
+                        Console.Write("↓");
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        Console.Write("←");
+                        break;
+                    case ConsoleKey.RightArrow:
+                        Console.Write("→");
+                        break;
+                    case ConsoleKey.Escape:
+                        isInput = false;
+                        break;
+                    default:
+                        Console.WriteLine("♥");
+                        break;
+                }
+            }
         }
     }
 }
