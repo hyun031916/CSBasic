@@ -90,6 +90,11 @@ namespace CSBasic2
                     Console.WriteLine("제대로 입력하였는지 확인해주세요!");
                     break;
             }
+
+            Console.WriteLine("자연수 판별기");
+            Console.Write("숫자 입력: ");
+            int number7 = int.Parse(Console.ReadLine());
+            Console.WriteLine(number7 > 0 ? "자연수" : "자연수 아님");
         }
     }
 }
