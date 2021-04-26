@@ -6,7 +6,7 @@ namespace CSBasic2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            /*Console.WriteLine("Hello World!");
             Console.Write("숫자 입력:");
             int input = int.Parse(Console.ReadLine());
 
@@ -39,6 +39,20 @@ namespace CSBasic2
             if (DateTime.Now.Hour > 12)
             {
                 Console.WriteLine("오후 입니다.");
+            }*/
+
+
+            //if elseif else
+            if(DateTime.Now.Hour < 11)
+            {
+                Console.WriteLine("아침 먹을 시간!");
+            }else if(DateTime.Now.Hour < 15)
+            {
+                Console.WriteLine("점심 먹을 시간!");
+            }
+            else
+            {
+                Console.WriteLine("저녁 먹을 시간!");
             }
         }
     }
