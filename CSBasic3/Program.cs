@@ -61,9 +61,34 @@ namespace CSBasic3
                 Console.Write((char)i2);
             }*/
 
-            for (int i3 = intArray3.Length -1; i >= 0; i--)
+            for (int i3 = intArray3.Length -1; i3 >= 0; i3--)
             {
                 Console.WriteLine(intArray3[i3]);
+            }
+
+            string[] array = { "과자", "음료수", "떡볶이", "피자", "곱창", "마라탕" };
+            foreach(var item in array)
+            {
+                Console.Write(item+", ");
+            }
+            Console.Write("먹고싶다.");
+
+            for(i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < i+1; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("");
+            }
+
+            for(i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10 - i; j++)
+                    Console.Write(" ");
+                for (int j = 0; j < i + 1; j++)
+                    Console.Write("*");
+                Console.Write("\n");
             }
          }
     }
