@@ -94,6 +94,23 @@ namespace CBasic4
             Console.WriteLine(MyMath.PI);
             MyMath.Hello();
 
+            List<Student> students = new List<Student> {
+                new Student() { name="윤인성", grade=1},
+                new Student() { name="김민경", grade = 2},
+                new Student() { name="이지민", grade = 5},
+                new Student() { name="강은별", grade=1},
+                new Student() { name="류현서", grade=4},
+                new Student() { name="김수현", grade=1},
+                new Student() { name="함기훈 선생님", favoriteFood="밀크티"},
+                new Student()
+             };
+            /*students.Add(new Student() { name = "윤인성", grade = 1});
+            students.Add(new Student() { name = "김민경", grade = 2 });
+            students.Add(new Student() { name = "이지민", grade = 5});
+            students.Add(new Student() { name = "류현서", grade = 4});
+            students.Add(new Student() { name = "강은별", grade =21});
+            students.Add(new Student() { name = "김수현", grade = 1});*/
+
         }
     }
 
