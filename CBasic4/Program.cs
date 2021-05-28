@@ -94,6 +94,14 @@ namespace CBasic4
             Console.WriteLine(MyMath.PI);
             MyMath.Hello();
 
+
+            /*students.Add(new Student() { name = "윤인성", grade = 1});
+            students.Add(new Student() { name = "김민경", grade = 2 });
+            students.Add(new Student() { name = "이지민", grade = 5});
+            students.Add(new Student() { name = "류현서", grade = 4});
+            students.Add(new Student() { name = "강은별", grade =21});
+            students.Add(new Student() { name = "김수현", grade = 1});*/
+
             List<Student> students = new List<Student> {
                 new Student() { name="윤인성", grade=1},
                 new Student() { name="김민경", grade = 2},
@@ -103,15 +111,25 @@ namespace CBasic4
                 new Student() { name="김수현", grade=1},
                 new Student() { name="함기훈 선생님", favoriteFood="밀크티"},
                 new Student()
-             };
-            /*students.Add(new Student() { name = "윤인성", grade = 1});
-            students.Add(new Student() { name = "김민경", grade = 2 });
-            students.Add(new Student() { name = "이지민", grade = 5});
-            students.Add(new Student() { name = "류현서", grade = 4});
-            students.Add(new Student() { name = "강은별", grade =21});
-            students.Add(new Student() { name = "김수현", grade = 1});*/
+            };
+            foreach (var item in students)
+                Console.WriteLine(item.name + " : " + item.grade);
+            /*
+            for (int i = 0; i < students.Count; i++)
+                if (students[i].grade > 0) {
+                    students.RemoveAt(i);
+                    i--;
+                }
+            */
+            for (int i = students.Count - 1; i >= 0; i--)
+                if (students[i].grade > 0)
+                    students.RemoveAt(i);
 
+            foreach (var item in students)
+                Console.WriteLine(item.name + " : " + item.grade);
         }
+
+
     }
 
     class FirtstClass
