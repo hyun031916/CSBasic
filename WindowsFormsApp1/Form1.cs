@@ -15,6 +15,35 @@ namespace WindowsFormsApp1
         public FormMain()
         {
             InitializeComponent();
+            this.Text = "김수현이다 짜잔";
+            Button button = new Button();
+            button.Text = "나 버튼";
+            Controls.Add(button);
+            button.Location = new Point(13, 13 + 23 + 23);
+            button.Width = 100;
+
+            Button button2 = new Button();
+            button2.Text = "나두 버튼";
+            Controls.Add(button2);
+            button2.Location = new Point(13, 13 + 23 + 3+50);
+            button2.Width = 150;
+
+            Button buttonTemp;
+            for(int i = 0; i < 5; i++)
+            {
+                buttonTemp = new Button();
+                buttonTemp.Text = "버튼" + i;
+                buttonTemp.Location = new Point(13, 13+ 23 + 23 + 20 * i);
+                buttonTemp.Width = 100 + i * 20;
+                Controls.Add(buttonTemp);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (trackBar1.Value < 20)
+                trackBar1.Value = 20;
+            this.Opacity = trackBar1.Value / 100.0;
         }
     }
 }
