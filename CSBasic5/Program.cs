@@ -15,20 +15,33 @@ namespace CSBasic5
             Console.WriteLine(ml.Multi(103, 32));
             ml.Print();
             Console.WriteLine(ml.Sum(1, 100));
-            Console.WriteLine(MyMath.Abs(52));
-            Console.WriteLine(MyMath.Abs(273));
+            MyMath.Abs(52);
+            MyMath.Abs(273);
+            MyMath.Abs(52.273f);
+            MyMath.Abs(52.273);
+            MyMath.Abs(30000000000);
         }
 
         class MyMath
         {
-            public static int Abs(int input)
+            //더블이 롱보다 범위가 더 큼
+            /*public static void Abs(int input)
             {
-                return (input < 0) ? -input : input;
-                /*if (input < 0)
+                Console.WriteLine("정수 : "+((input < 0) ? -input : input));
+            }*/
+            public static void Abs(double input)    //플롯으로 하면 더블이 못들어감
+            {
+                Console.WriteLine("더블 : " + ((input < 0) ? -input : input));
+            }
+
+            /*public static void Abs(long input)
+            {
+                Console.WriteLine("롱 : " + ((input < 0) ? -input : input));
+                *//*if (input < 0)
                     return -input;
                 else
-                    return input;*/
-            }
+                    return input;*//*
+            }*/
         }
         class MultiClass
         {
