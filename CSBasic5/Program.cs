@@ -10,16 +10,20 @@ namespace CSBasic5
     {
         static void Main(string[] args)
         {
-            MultiClass ml = new MultiClass();
-            Console.WriteLine(ml.Multi(52, 273));
-            Console.WriteLine(ml.Multi(103, 32));
-            ml.Print();
-            Console.WriteLine(ml.Sum(1, 100));
+            MultiClass m1 = new MultiClass();
+            Console.WriteLine(m1.Multi(52, 273));
+            Console.WriteLine(m1.Multi(103, 32));
+            m1.Print();
+            Console.WriteLine(m1.Sum(1, 100));
             MyMath.Abs(52);
             MyMath.Abs(273);
             MyMath.Abs(52.273f);
             MyMath.Abs(52.273);
             MyMath.Abs(30000000000);
+
+            m1.somePublic();
+            //m1.someDefault(); 기본은 private
+            //m1.somePriavate();
         }
 
         class MyMath
@@ -45,6 +49,21 @@ namespace CSBasic5
         }
         class MultiClass
         {
+            public void somePublic()
+            {
+                Console.WriteLine("public");
+            }
+
+            void someDefault()
+            {
+                Console.WriteLine("DeFault");
+            }
+
+            private void somePrivate()
+            {
+                Console.WriteLine("private");
+            }
+
             public int Multi(int x, int y)
             {
                 return x * y;
