@@ -20,7 +20,7 @@ namespace Chapter6
     }
     class Cat : Animal
     {
-        public void Meow() { Console.WriteLine("냥냥 웁니다."); }
+        public void Meow() { Console.WriteLine("냐옹 웁니다."); }
     }
     class Program
     {
