@@ -6,7 +6,31 @@ using System.Threading.Tasks;
 
 namespace Chapter6
 {
-     class Animal
+    abstract class AbstractParent
+    {
+        public abstract void Test();
+    }
+    class AbstractChild: AbstractParent
+    {
+        public override void Test() { }
+    }
+    class Parent
+    {
+        public int variable = 273;
+        public void Method()
+        {
+            Console.WriteLine("부모의 메서드");
+        }
+    }
+    class Child : Parent
+    {
+        public new string variable = "shadowing";
+        public new void Method()
+        {
+            Console.WriteLine("자식의 메서드");
+        }
+    }
+    class Animal
     {
         public int Age { get; set; }
         public Animal() { this.Age = 0; }
@@ -26,6 +50,17 @@ namespace Chapter6
     {
         static void Main(string[] args)
         {
+            List<Animal> Animals = new List<Animal>()
+            {
+                new Dog(), new Cat(), new Cat(), new Dog(),
+                new Dog(), new Cat(), new Cat(), new Dog()
+            };
+            foreach(var item in Animals)
+            {
+                item.Eat();
+                item.Sleep();
+                ((Cat)item).Meow();
+            }
         }
     }
 }
