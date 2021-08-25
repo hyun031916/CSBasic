@@ -12,6 +12,9 @@ namespace Form_Prac
 {
     public partial class Form1 : Form
     {
+        enum OrderState { Ordered, Paymented, Prepared, Sended };
+        enum Course { NewmediaSoftware, NewmeidaWebsolution, NewmediaDesign };
+        enum CFood { 짜장면, 짬뽕, 볶음밥 };
         public Form1()
         {
             InitializeComponent();
