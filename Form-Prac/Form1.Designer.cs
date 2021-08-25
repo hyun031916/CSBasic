@@ -52,6 +52,7 @@ namespace Form_Prac
             this.btnMessageBox2.TabIndex = 1;
             this.btnMessageBox2.Text = "메세지 박스 띄우기";
             this.btnMessageBox2.UseVisualStyleBackColor = true;
+            this.btnMessageBox2.Click += new System.EventHandler(this.btnMessageBox1_Click);
             // 
             // btnMessageBox3
             // 
@@ -61,6 +62,7 @@ namespace Form_Prac
             this.btnMessageBox3.TabIndex = 2;
             this.btnMessageBox3.Text = "메세지 박스 띄우기";
             this.btnMessageBox3.UseVisualStyleBackColor = true;
+            this.btnMessageBox3.Click += new System.EventHandler(this.btnMessageBox1_Click);
             // 
             // Form1
             // 
