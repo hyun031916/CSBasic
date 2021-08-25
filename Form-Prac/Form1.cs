@@ -18,6 +18,7 @@ namespace Form_Prac
         public Form1()
         {
             InitializeComponent();
+            IsMdiContainer = true;
         }
 
         private void btnMessageBox1_Click(object sender, EventArgs e)
@@ -47,6 +48,20 @@ namespace Form_Prac
                 case DialogResult.Cancel:
                     MessageBox.Show("나도 안반가워요~ 😂");
                     break;
+            }
+        }
+
+        private void btnModaless_Click(object sender, EventArgs e)
+        {
+            Form form = new FormCustom();
+            if (sender == btnModaless)
+            {
+                form.MdiParent = this;
+                form.Show();
+            }
+            else if (sender == btnModal)
+            {
+                form.ShowDialog();
             }
         }
     }
