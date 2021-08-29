@@ -8,11 +8,19 @@ namespace CSBasic
 {
     class Program
     {
+
+        public static string hobby = "movie";
+
+        static void Main(String[] args)
+        {
+            string hobby = "Watching romance movies";
+            Console.WriteLine(hobby);
+        }
         /*string Var = "테스트";
-        //var testing = "전역변수에 var 시용 불가";*/
+        //var testing = "전역변수에 var 시용 불가";*//*
 
         //상속과 생성자 코드1
-        /*class Parent
+        *//*class Parent
         {
             public Parent()
             {
@@ -26,7 +34,7 @@ namespace CSBasic
             {
                 Console.WriteLine("자식 생성자");
             }
-        }*/
+        }*//*
 
         //상속과 생성자 코드2
         class Parent
@@ -46,7 +54,7 @@ namespace CSBasic
         }
         static void Main(string[] args)
         {
-            /*var name = "김" + "수" + "현";
+            *//*var name = "김" + "수" + "현";
            
 
             var alpha = "알파";
@@ -293,13 +301,14 @@ namespace CSBasic
             Console.WriteLine(-1*int.MaxValue);
            // Console.WriteLine(-1 * int.MinValue);
             Console.WriteLine(-1L * int.MinValue);
-*/
-            Child child = new Child();
+*//*
+            //Child child = new Child();
+
 
 
             
         }
-
+*/
         
     }
 }
