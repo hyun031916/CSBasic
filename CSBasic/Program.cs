@@ -8,11 +8,45 @@ namespace CSBasic
 {
     class Program
     {
-        string Var = "테스트";
-        //var testing = "전역변수에 var 시용 불가";
+        /*string Var = "테스트";
+        //var testing = "전역변수에 var 시용 불가";*/
+
+        //상속과 생성자 코드1
+        /*class Parent
+        {
+            public Parent()
+            {
+                Console.WriteLine("부모 생성자");
+            }
+        }
+
+        class Child : Parent
+        {
+            public Child()
+            {
+                Console.WriteLine("자식 생성자");
+            }
+        }*/
+
+        //상속과 생성자 코드2
+        class Parent
+        {
+            public Parent()
+            {
+                Console.WriteLine("부모 생성자");
+            }
+        }
+
+        class Child : Parent
+        {
+            public Child():base()
+            {
+                Console.WriteLine("자식 생성자");
+            }
+        }
         static void Main(string[] args)
         {
-            var name = "김" + "수" + "현";
+            /*var name = "김" + "수" + "현";
            
 
             var alpha = "알파";
@@ -21,9 +55,9 @@ namespace CSBasic
             //string ❤ = "이모지는 안 된다.";
 
             // 인라인 주석
-            /*
+            *//*
              * 여러 줄 주석
-             */
+             *//*
             Console.Write("개행 안 됨");
             Console.WriteLine("개행 됨");
 
@@ -154,8 +188,8 @@ namespace CSBasic
             var number5 = 100.0;
             var number6 = 100.0F;
 
-            string input = Console.ReadLine();
-            Console.WriteLine("input: " + input);
+            *//*string input = Console.ReadLine();
+            Console.WriteLine("input: " + input);*/
             /*while (true)
             {
                 input = Console.ReadLine();
@@ -167,18 +201,22 @@ namespace CSBasic
                 {
                     break;
                 }
-            }*/
+            }*//*
 
             // 강제 형변환
             //long longNumber = 2147483647L + 21394932L;
             long longNumber = 100;
             int intNumber = (int)longNumber;
             Console.WriteLine(longNumber);
+            Console.WriteLine(longNumber.GetType());
+            Console.WriteLine(intNumber.GetType());
 
             // 자동 형 변환
             intNumber = 100;
             longNumber = (intNumber);
             Console.WriteLine(longNumber);
+            Console.WriteLine(longNumber.GetType());
+            Console.WriteLine(intNumber.GetType());
 
             //int -> long, float, double
             //long -> float, double;
@@ -255,8 +293,13 @@ namespace CSBasic
             Console.WriteLine(-1*int.MaxValue);
            // Console.WriteLine(-1 * int.MinValue);
             Console.WriteLine(-1L * int.MinValue);
+*/
+            Child child = new Child();
+
 
             
         }
+
+        
     }
 }
