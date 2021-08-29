@@ -8,33 +8,27 @@ namespace CSBasic
 {
     class Program
     {
-
-        public static string hobby = "movie";
-
-        static void Main(String[] args)
-        {
-            string hobby = "Watching romance movies";
-            Console.WriteLine(hobby);
-        }
         /*string Var = "테스트";
         //var testing = "전역변수에 var 시용 불가";*//*
 
         //상속과 생성자 코드1
-        *//*class Parent
+        */
+        class Boss
         {
-            public Parent()
-            {
-                Console.WriteLine("부모 생성자");
-            }
+            public int annual = 40;
         }
 
-        class Child : Parent
+        class Staff : Boss
         {
-            public Child()
-            {
-                Console.WriteLine("자식 생성자");
-            }
-        }*//*
+            public double annual = 5.5;
+        }
+
+       static void Main(string[] args)
+        {
+            Staff staff = new Staff();
+            Console.WriteLine(staff.annual);
+        }
+        /*
 
         //상속과 생성자 코드2
         class Parent
